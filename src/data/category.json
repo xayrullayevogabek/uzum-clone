@@ -1,0 +1,743 @@
+[
+  {
+    "id": 1,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Elektronika"
+      },
+      "ru": {
+        "title": "Elektronika"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Maishiy texnika"
+      },
+      "ru": {
+        "title": "Maishiy texnika"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Kiyim"
+      },
+      "ru": {
+        "title": "Kiyim"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Poyabzallar"
+      },
+      "ru": {
+        "title": "Poyabzallar"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Aksessuarlar"
+      },
+      "ru": {
+        "title": "Aksessuarlar"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Goʻzallik va parvarish"
+      },
+      "ru": {
+        "title": "Goʻzallik va parvarish"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Salomatlik"
+      },
+      "ru": {
+        "title": "Salomatlik"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Uy-roʻzgʻor buyumlari"
+      },
+      "ru": {
+        "title": "Uy-roʻzgʻor buyumlari"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Qurilish va taʼmirlash"
+      },
+      "ru": {
+        "title": "Qurilish va taʼmirlash"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Elektronika"
+      },
+      "ru": {
+        "title": "Elektronika"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Elektronika"
+      },
+      "ru": {
+        "title": "Elektronika"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Elektronika"
+      },
+      "ru": {
+        "title": "Elektronika"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Elektronika"
+      },
+      "ru": {
+        "title": "Elektronika"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Elektronika"
+      },
+      "ru": {
+        "title": "Elektronika"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Elektronika"
+      },
+      "ru": {
+        "title": "Elektronika"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Elektronika"
+      },
+      "ru": {
+        "title": "Elektronika"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Elektronika"
+      },
+      "ru": {
+        "title": "Elektronika"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Elektronika"
+      },
+      "ru": {
+        "title": "Elektronika"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "icon": "",
+    "href": "#",
+    "translations": {
+      "uz": {
+        "title": "Elektronika"
+      },
+      "ru": {
+        "title": "Elektronika"
+      }
+    },
+    "childmenu": [
+      {
+        "id": 1,
+        "translations": {
+          "uz": {
+            "title": "Smartfonlar va telefonlar"
+          },
+          "ru": {
+            "title": "Smartfonlar va telefonlar"
+          }
+        },
+        "childmenu": [
+          {
+            "id": 1,
+            "translations": {
+              "uz": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              },
+              "ru": {
+                "title": "Aksessuarlar va ehtiyot qismlari"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
