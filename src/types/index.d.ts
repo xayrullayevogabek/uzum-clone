@@ -52,6 +52,13 @@ export interface ProductType {
   title: string;
 }
 
+export interface ContextType {
+  pageLoader: boolean;
+  setPageLoader: Dispatch<SetStateAction<boolean>>;
+}
+
 export interface GroupedProductsType {
-  [category: string]: ProductType[];
+  categoryName: string;
+  image: string;
+  data: ProductType[];
 }

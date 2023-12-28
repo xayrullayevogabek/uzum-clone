@@ -1,6 +1,6 @@
 import React from "react";
 import TopNavbar from "./top-nav";
-import Image from "next/image";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { BsFilterSquare } from "react-icons/bs";
 import { IoSearchOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa6";
@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       <TopNavbar />
-      <header className="flex items-center justify-between px-36 py-5 max-[1300px]:px-5">
+      <header className="hidden md:flex items-center justify-between px-36 py-5 max-[1300px]:px-5">
         <div className="flex items-center">
           <Link href="/">
             <svg
@@ -126,10 +126,6 @@ const Navbar = () => {
           </button>
         </form>
         <div className="flex items-center justify-center space-x-3">
-          <button className="flex items-center hover:bg-slate-200 px-2 py-3 rounded-sm ml-5">
-            <FaRegUser className="text-xl mr-2" />
-            <span className="max-[1200px]:hidden">Kirish</span>
-          </button>
           <Link href="#">
             <button className="flex items-center space-x-2 hover:bg-slate-200 px-2 py-3 rounded-sm">
               <FaRegHeart className="text-xl mr-1" />
@@ -142,6 +138,17 @@ const Navbar = () => {
               <span className="max-[1200px]:hidden">Savat</span>
             </button>
           </Link>
+          <SignedIn>
+            <UserButton afterSignOutUrl="/uz"/>
+          </SignedIn>
+          <SignedOut>
+            <SignInButton mode="modal">
+              <button className="flex items-center hover:bg-slate-200 px-2 py-3 rounded-sm ml-5">
+                <FaRegUser className="text-xl mr-2" />
+                <span className="max-[1200px]:hidden">Kirish</span>
+              </button>
+            </SignInButton>
+          </SignedOut>
         </div>
       </header>
       <Navigation />

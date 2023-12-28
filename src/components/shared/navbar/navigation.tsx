@@ -25,7 +25,7 @@ const Navigation = () => {
   }, []);
 
   return (
-    <div className="px-36 flex items-center justify-between max-[1300px]:px-5">
+    <div className="px-36 hidden md:flex items-center justify-between max-[1300px]:px-5">
       <Link href={"#"} className="flex items-center text-sm font-semibold">
         <Image
           width={24}

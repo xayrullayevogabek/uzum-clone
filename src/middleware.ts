@@ -1,11 +1,22 @@
+import { authMiddleware } from "@clerk/nextjs";
+ 
 import createMiddleware from "next-intl/middleware";
-
-export default createMiddleware({
+ 
+const intlMiddleware = createMiddleware({
   locales: ["uz", "ru"],
-
+ 
   defaultLocale: "uz",
 });
-
+ 
+export default authMiddleware({
+  beforeAuth: (req) => {
+    return intlMiddleware(req);
+  },
+  publicRoutes: ["/uz", "/ru"],
+});
+ 
 export const config = {
-  matcher: ["/", "/(ru|uz)/:path*"],
+  matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
 };
+
+
