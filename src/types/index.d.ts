@@ -55,6 +55,11 @@ export interface ProductType {
 export interface ContextType {
   pageLoader: boolean;
   setPageLoader: Dispatch<SetStateAction<boolean>>;
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
+  product: ProductType | null;
+  setProduct: Dispatch<SetStateAction<ProductType | null>>;
+  addSpaceToNumber: (num: number) => string;
 }
 
 export interface GroupedProductsType {

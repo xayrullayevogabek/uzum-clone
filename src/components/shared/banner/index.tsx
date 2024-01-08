@@ -13,7 +13,6 @@ const Banner = () => {
   return (
     <div className=" py-5 relative h-full">
       <Swiper
-        navigation={true}
         pagination={true}
         loop={true}
         modules={[Pagination]}

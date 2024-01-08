@@ -8,6 +8,7 @@ import { FaRegHeart } from "react-icons/fa";
 import { GrShop } from "react-icons/gr";
 import Link from "next/link";
 import Navigation from "./navigation";
+import ProductDialog from "../product-dialog/page";
 
 const Navbar = () => {
   return (
@@ -139,7 +140,7 @@ const Navbar = () => {
             </button>
           </Link>
           <SignedIn>
-            <UserButton afterSignOutUrl="/uz"/>
+            <UserButton afterSignOutUrl="/uz" />
           </SignedIn>
           <SignedOut>
             <SignInButton mode="modal">
@@ -152,6 +153,8 @@ const Navbar = () => {
         </div>
       </header>
       <Navigation />
+      {/* Product Dialog */}
+      <ProductDialog />
     </>
   );
 };

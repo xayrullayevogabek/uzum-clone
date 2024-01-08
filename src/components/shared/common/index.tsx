@@ -4,6 +4,7 @@ import { ProductType, GroupedProductsType } from "@/types";
 import axios from "axios";
 import DataGrid from "../data-grid";
 import DataRow from "../data-row";
+import SkeletonCards from "../skeleton";
 
 const Common = () => {
   const [products, setProducts] = useState<ProductType[]>([]);
@@ -51,8 +52,15 @@ const Common = () => {
   }, []);
   return (
     <div className="mt-2">
-      <DataGrid allProducts={products} />
-      <DataRow groupedProducts={sortedProducts}/>
+      {products.length > 0 && sortedProducts.length > 0 ? (
+        <>
+          <DataGrid allProducts={products} />
+          <DataRow groupedProducts={sortedProducts} />
+          <DataGrid allProducts={products} />
+        </>
+      ) : (
+        <SkeletonCards />
+      )}
     </div>
   );
 };

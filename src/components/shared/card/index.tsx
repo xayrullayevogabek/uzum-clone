@@ -1,21 +1,26 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import ReactStars from "react-stars";
 import { ProductType } from "@/types";
 import CustomImage from "../custom-image";
+import { useGlobalContext } from "@/context";
 
 interface Props {
   product: ProductType;
 }
 
 const Card = ({ product }: Props) => {
-  const addSpaceToNumber = (num: number) => {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  const { setOpen, setProduct, addSpaceToNumber } = useGlobalContext();
+  
+  const openHandler = () => {
+    setProduct(product);
+    setOpen(true);
   };
+
   return (
     <div className="w-full cursor-pointer group hover:shadow-sm py-4 px-2 rounded-lg">
       <div className="relative w-full overflow-hidden bg-[#EFEFEF] h-64 rounded-md">
-        <CustomImage product={product} />
+        <CustomImage image={product.thumbnail} />
         <button className=" absolute right-2 top-2">
           <svg
             data-v-ff0a7354=""
@@ -37,7 +42,9 @@ const Card = ({ product }: Props) => {
             ></path>
           </svg>
         </button>
-        <div className=" absolute bottom-0 left-0 px-1 capitalize text-sm rounded-sm bg-[#5000AA] text-white">{product.category.split("-").join(" ")}</div>
+        <div className=" absolute bottom-0 left-0 px-1 capitalize text-sm rounded-sm bg-[#5000AA] text-white">
+          {product.category.split("-").join(" ")}
+        </div>
       </div>
       <span className=" line-clamp-2 capitalize text-[13px] font-medium mt-2">
         {product.description}
@@ -62,7 +69,10 @@ const Card = ({ product }: Props) => {
             {addSpaceToNumber(Math.floor((product.price * 12340) / 2))} so'm
           </span>
         </div>
-        <button className="p-1 border border-gray-400 rounded-full">
+        <button
+          onClick={openHandler}
+          className="p-1 border border-gray-400 rounded-full"
+        >
           <svg
             data-v-40da8b10=""
             width="24"
