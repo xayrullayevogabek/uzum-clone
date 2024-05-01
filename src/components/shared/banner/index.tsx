@@ -17,7 +17,7 @@ const Banner = () => {
         loop={true}
         modules={[Pagination]}
         style={{ borderRadius: "15px" }}
-        className="mySwiper h-[25vh] md:h-[60vh] w-full"
+        className="mySwiper h-[25vh] md:h-[55vh] w-full"
         onSlideChange={(swiper) => {
           swiperRef.current = swiper;
         }}
@@ -27,7 +27,7 @@ const Banner = () => {
             <img
               src={item.image}
               alt="banner-image"
-              className="w-full h-full"
+              className="w-full h-full object-fill"
             />
           </SwiperSlide>
         ))}

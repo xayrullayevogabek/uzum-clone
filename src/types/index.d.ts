@@ -50,6 +50,8 @@ export interface ProductType {
   stock: number;
   thumbnail: string;
   title: string;
+  checked: boolean;
+  quantity: number;
 }
 
 export interface ContextType {
@@ -58,8 +60,7 @@ export interface ContextType {
   open: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
   product: ProductType | null;
-  setProduct: Dispatch<SetStateAction<ProductType | null>>;
-  addSpaceToNumber: (num: number) => string;
+  setProduct: Dispatch<SetStateAction<ProductType>>;
 }
 
 export interface GroupedProductsType {

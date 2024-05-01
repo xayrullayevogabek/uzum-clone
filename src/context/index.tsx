@@ -8,10 +8,6 @@ const GlobalContext = ({ children }: { children: React.ReactNode }) => {
   const [open, setOpen] = useState(false);
   const [product, setProduct] = useState<ProductType | null>(null);
 
-  const addSpaceToNumber = (num: number): string => {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-  };
-
   return (
     <Context.Provider
       value={{
@@ -21,7 +17,6 @@ const GlobalContext = ({ children }: { children: React.ReactNode }) => {
         setProduct,
         open,
         setOpen,
-        addSpaceToNumber,
       }}
     >
       {children}

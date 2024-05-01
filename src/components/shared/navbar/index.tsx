@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import TopNavbar from "./top-nav";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
@@ -8,13 +9,16 @@ import { FaRegHeart } from "react-icons/fa";
 import { GrShop } from "react-icons/gr";
 import Link from "next/link";
 import Navigation from "./navigation";
-import ProductDialog from "../product-dialog/page";
+import ProductDialog from "../product-dialog";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
 
 const Navbar = () => {
+  const store = useSelector((store: RootState) => store.cart);
   return (
     <>
       <TopNavbar />
-      <header className="hidden md:flex items-center justify-between px-36 py-5 max-[1300px]:px-5">
+      <header className="hidden md:flex items-center justify-between container py-5 max-[1300px]:px-5">
         <div className="flex items-center">
           <Link href="/">
             <svg
@@ -127,16 +131,17 @@ const Navbar = () => {
           </button>
         </form>
         <div className="flex items-center justify-center space-x-3">
-          <Link href="#">
+          <Link href="/wishes">
             <button className="flex items-center space-x-2 hover:bg-slate-200 px-2 py-3 rounded-sm">
               <FaRegHeart className="text-xl mr-1" />
               <span className="max-[1200px]:hidden">Saralangan</span>
             </button>
           </Link>
-          <Link href="#">
+          <Link href="/cart">
             <button className="flex items-center space-x-2 hover:bg-slate-200 px-2 py-3 rounded-sm">
               <GrShop className="text-xl mr-2" />
               <span className="max-[1200px]:hidden">Savat</span>
+              <span className="max-[1200px]:hidden block text-white px-2 rounded-sm bg-[#7000FF]">{store.cart.length}</span>
             </button>
           </Link>
           <SignedIn>

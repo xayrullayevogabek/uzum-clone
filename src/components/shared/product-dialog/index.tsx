@@ -2,31 +2,39 @@
 import React, { useState } from "react";
 import { FiMinus, FiPlus } from "react-icons/fi";
 import { GrFormNext } from "react-icons/gr";
-import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useGlobalContext } from "@/context";
 import CustomImage from "../custom-image";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "@/redux/store";
+import { addToCart } from "@/redux/slices/cartSlice";
+import { addSpaceToNumber } from "@/lib/utils";
 
 const ProductDialog = () => {
-  const { open, setOpen, product, addSpaceToNumber } = useGlobalContext();
-  const [imageIndx, setImageIndx] = useState<number | null>(null);
-  const [counter, setCounter] = useState<number>(1);
-
-  const incrementCounter = () => {
-    if (counter !== product?.stock) {
-      setCounter((prev) => prev + 1);
-    }
-  };
-
-  const decrementCounter = () => {
-    if (counter > 1) {
-      setCounter((prev) => prev - 1);
-    }
-  };
+  const { open, setOpen, product } = useGlobalContext();
+  const [count, setCount] = useState<number>(1);
+  const [imageIndx, setImageIndx] = useState<number>(0);
+  const dispatch = useDispatch();
 
   const handleOpenChange = () => {
     setOpen(false);
-    setImageIndx(null);
+    setImageIndx(0);
+  };
+
+  const handleClick = (e: any) => {
+    switch (e.currentTarget.name) {
+      case "increment":
+        setCount((prev) => (prev += 1));
+        break;
+      case "decriment":
+        if (count > 1) {
+          setCount((prev) => (prev -= 1));
+        }
+        break;
+      case "addCart":
+        dispatch(addToCart({ ...product, quantity: count }));
+        break;
+    }
   };
 
   return (
@@ -71,18 +79,16 @@ const ProductDialog = () => {
               <span>Miqdor:</span>
               <div className="flex items-center mt-2">
                 <div className="mr-2 border border-gray-300 rounded-md w-28 px-2 flex justify-between py-2">
-                  <button
-                    onClick={decrementCounter}
-                    className={`${counter === 1 ? "text-gray-400" : ""}`}
-                  >
+                  <button name="decriment" onClick={handleClick} className={""}>
                     <FiMinus />
                   </button>
-                  <span>{counter}</span>
+                  <span>{count}</span>
                   <button
-                    onClick={incrementCounter}
-                    className={`${
-                      counter === product?.stock ? "text-gray-400" : ""
-                    }`}
+                    // className={`${
+                    //   count === product?.stock ? "text-gray-400" : ""
+                    // }`}
+                    name="increment"
+                    onClick={handleClick}
                   >
                     <FiPlus />
                   </button>
@@ -95,8 +101,8 @@ const ProductDialog = () => {
             <div className="mt-3">
               <span className="text-lg font-semibold flex items-center">
                 {addSpaceToNumber(
-                  Math.floor(((product?.price as number) * 12340) / 2 * counter)
-                )}{" "}
+                  Math.floor(((product?.price as number) * 12340) / 2) * count
+                )}
                 so'm
                 <span className="ml-5 line-through text-sm text-gray-400 font-normal">
                   {addSpaceToNumber(
@@ -121,7 +127,11 @@ const ProductDialog = () => {
                 </span>
                 <GrFormNext className=" ml-auto mr-4 text-lg" />
               </div>
-              <button className="w-full p-4 mt-3 rounded-lg text-white font-semibold bg-[#7000FF]">
+              <button
+                name="addCart"
+                onClick={handleClick}
+                className="w-full p-4 mt-3 rounded-lg text-white font-semibold bg-[#7000FF]"
+              >
                 Savatga Qo'shish
               </button>
             </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/shared/navbar";
-import Provider from "./provider";
+import Providers from "./provider";
 import { notFound } from "next/navigation";
 import { ClerkProvider } from "@clerk/nextjs";
 import { NextIntlClientProvider, useMessages } from "next-intl";
@@ -29,14 +29,14 @@ export default function RootLayout({ children, params: { locale } }: Props) {
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <ClerkProvider>
-          <NextIntlClientProvider locale={locale} messages={messages}>
-            <Provider>
+        <Providers>
+          <ClerkProvider>
+            <NextIntlClientProvider locale={locale} messages={messages}>
               <Navbar />
               <main>{children}</main>
-            </Provider>
-          </NextIntlClientProvider>
-        </ClerkProvider>
+            </NextIntlClientProvider>
+          </ClerkProvider>
+        </Providers>
       </body>
     </html>
   );

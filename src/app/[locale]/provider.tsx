@@ -2,15 +2,19 @@
 import React from "react";
 import { Client, HydrationProvider } from "react-hydration-provider";
 import GlobalContext from "@/context";
+import { store } from "@/redux/store";
+import { Provider } from "react-redux";
 
-const Provider = ({ children }: { children: React.ReactNode }) => {
+const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
-    <HydrationProvider>
-      <GlobalContext>
-        <Client>{children}</Client>
-      </GlobalContext>
-    </HydrationProvider>
+    <Provider store={store}>
+      <HydrationProvider>
+        <GlobalContext>
+          <Client>{children}</Client>
+        </GlobalContext>
+      </HydrationProvider>
+    </Provider>
   );
 };
 
-export default Provider;
+export default Providers;

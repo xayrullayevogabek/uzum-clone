@@ -4,16 +4,17 @@ import Image from "next/image";
 interface Props {
   image: string;
   objectFit?:string
+  className?:string
 }
 
-const CustomImage = ({ image, objectFit = "object-contain" }: Props) => {
+const CustomImage = ({ image, objectFit = "object-contain", className }: Props) => {
   const [isLoading, setIsLoading] = useState(true);
   return (
     <Image
       src={image}
       alt={"product-image"}
       fill
-      className={` ${objectFit} group-hover:scale-105 absolute duration-500 ease-in-out ${
+      className={` ${objectFit} group-hover:scale-105 absolute duration-500 ease-in-out ${className} ${
         isLoading
           ? "scale-110 blur-2xl grayscale"
           : "scale-100 blur-0 grayscale-0"

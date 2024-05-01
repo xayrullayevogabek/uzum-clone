@@ -5,7 +5,7 @@ import Common from "@/components/shared/common";
 
 const Home = () => {
   return (
-    <div className="px-36 max-[1300px]:px-5">
+    <div className="container max-[1300px]:px-5">
       <Banner />
       <Common />
     </div>

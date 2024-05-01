@@ -24,62 +24,64 @@ const TopNavbar = () => {
   return (
     <>
       {/* Desktop Top Header */}
-      <div className="hidden lg:flex justify-between items-center bg-gray-100 px-36 py-1 max-[1300px]:px-5">
-        <ul className="flex items-center space-x-4">
-          <li className="flex items-center">
-            <SlLocationPin className="mr-1" />
-            {t("city")}:{" "}
-            <span className="underline text-sm font-semibold">Samarkand</span>
-          </li>
-          <li className="cursor-pointer hover:text-black">
-            <Link
-              href="https://uzum.uz/uz/about/delivery-points"
-              target="_blank"
-            >
-              {t("delivery")}
-            </Link>{" "}
-          </li>
-        </ul>
-        <span className=" text-gray-400 block max-[1200px]:hidden">
-          {t("deliveryDay")}
-        </span>
-        <ul className="flex items-center space-x-4">
-          <li className="cursor-pointer hover:text-black text-gray-600">
-            {t("question")}
-          </li>
-          <li className="cursor-pointer hover:text-black text-gray-600">
-            {t("order")}
-          </li>
-          {currenstLocale === "uz" ? (
-            <Link
-              href={redirectedPathName("ru")}
-              className="flex items-center cursor-pointer"
-            >
-              <Image
-                src="https://asaxiy.uz/custom-assets/images/icons/header/language-ru.svg"
-                className="mr-1"
-                width={20}
-                height={20}
-                alt=""
-              />{" "}
-              Русский
-            </Link>
-          ) : (
-            <Link
-              href={redirectedPathName("uz")}
-              className="flex items-center cursor-pointer"
-            >
-              <Image
-                src="https://asaxiy.uz/custom-assets/images/icons/header/language-uz.svg"
-                className="mr-1"
-                width={20}
-                height={20}
-                alt=""
-              />{" "}
-              O'zbekcha
-            </Link>
-          )}
-        </ul>
+      <div className=" hidden lg:flex bg-gray-100 py-1 max-[1300px]:px-5">
+        <div className="hidden container lg:flex justify-between items-center bg-gray-100 py-1 max-[1300px]:px-5">
+          <ul className="flex items-center space-x-4">
+            <li className="flex items-center">
+              <SlLocationPin className="mr-1" />
+              {t("city")}:{" "}
+              <span className="underline text-sm font-semibold">Samarkand</span>
+            </li>
+            <li className="cursor-pointer hover:text-black">
+              <Link
+                href="https://uzum.uz/uz/about/delivery-points"
+                target="_blank"
+              >
+                {t("delivery")}
+              </Link>{" "}
+            </li>
+          </ul>
+          <span className=" text-gray-400 block max-[1200px]:hidden">
+            {t("deliveryDay")}
+          </span>
+          <ul className="flex items-center space-x-4">
+            <li className="cursor-pointer hover:text-black text-gray-600">
+              {t("question")}
+            </li>
+            <li className="cursor-pointer hover:text-black text-gray-600">
+              {t("order")}
+            </li>
+            {currenstLocale === "uz" ? (
+              <Link
+                href={redirectedPathName("ru")}
+                className="flex items-center cursor-pointer"
+              >
+                <Image
+                  src="https://asaxiy.uz/custom-assets/images/icons/header/language-ru.svg"
+                  className="mr-1"
+                  width={20}
+                  height={20}
+                  alt=""
+                />{" "}
+                Русский
+              </Link>
+            ) : (
+              <Link
+                href={redirectedPathName("uz")}
+                className="flex items-center cursor-pointer"
+              >
+                <Image
+                  src="https://asaxiy.uz/custom-assets/images/icons/header/language-uz.svg"
+                  className="mr-1"
+                  width={20}
+                  height={20}
+                  alt=""
+                />{" "}
+                O'zbekcha
+              </Link>
+            )}
+          </ul>
+        </div>
       </div>
 
       {/* Mobile Top Header */}
@@ -100,8 +102,12 @@ const TopNavbar = () => {
       </div>
       <form className=" flex md:hidden w-full px-5 mt-2">
         <div className="w-full flex items-center p-2 bg-[#EAECEF] rounded-lg">
-          <FiSearch className="text-xl font-bold"/>
-          <input className="w-full bg-transparent h-full border-none outline-none px-2" type="text" placeholder="Mahsulotlarni qidirish" />
+          <FiSearch className="text-xl font-bold" />
+          <input
+            className="w-full bg-transparent h-full border-none outline-none px-2"
+            type="text"
+            placeholder="Mahsulotlarni qidirish"
+          />
         </div>
       </form>
     </>
