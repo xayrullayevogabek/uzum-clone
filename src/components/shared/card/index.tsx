@@ -69,14 +69,14 @@ const Card = ({ product }: Props) => {
             ></path>
           </svg>
         </button>
-        <div
-          onClick={() => router.push(`/product/${product.id}`)}
-          className=" absolute bottom-0 left-0 px-1 capitalize text-sm rounded-sm bg-[#5000AA] text-white"
-        >
-          {product.category.split("-").join(" ")}
+        <div className=" absolute bottom-0 left-0 px-1 capitalize text-sm rounded-sm bg-[#5000AA] text-white">
+          {product && product.category.split("-").join(" ")}
         </div>
       </div>
-      <span className=" line-clamp-2 capitalize text-[13px] font-medium mt-2">
+      <span
+        onClick={() => router.push(`/product/${product.id}`)}
+        className=" line-clamp-2 capitalize text-[13px] font-medium mt-2"
+      >
         {product.description}
       </span>
       <div className="flex items-center ">

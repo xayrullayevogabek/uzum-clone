@@ -9,6 +9,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/redux/store";
 import { addToCart } from "@/redux/slices/cartSlice";
 import { addSpaceToNumber } from "@/lib/utils";
+import Counter from "../counter.tsx";
+import { ProductType } from "@/types";
 
 const ProductDialog = () => {
   const { open, setOpen, product } = useGlobalContext();
@@ -18,11 +20,12 @@ const ProductDialog = () => {
 
   const handleOpenChange = () => {
     setOpen(false);
+    setCount(1);
     setImageIndx(0);
   };
 
-  const handleClick = (e: any) => {
-    switch (e.currentTarget.name) {
+  const handleClick = (type: string) => {
+    switch (type) {
       case "increment":
         setCount((prev) => (prev += 1));
         break;
@@ -78,21 +81,11 @@ const ProductDialog = () => {
             <div className="mt-2">
               <span>Miqdor:</span>
               <div className="flex items-center mt-2">
-                <div className="mr-2 border border-gray-300 rounded-md w-28 px-2 flex justify-between py-2">
-                  <button name="decriment" onClick={handleClick} className={""}>
-                    <FiMinus />
-                  </button>
-                  <span>{count}</span>
-                  <button
-                    // className={`${
-                    //   count === product?.stock ? "text-gray-400" : ""
-                    // }`}
-                    name="increment"
-                    onClick={handleClick}
-                  >
-                    <FiPlus />
-                  </button>
-                </div>
+                <Counter
+                  item={product as ProductType}
+                  handleClick={handleClick}
+                  quantity={count}
+                />
                 <span className=" text-green-500 text-sm font-light">
                   Sotuvda {product?.stock} dona bor
                 </span>
@@ -129,7 +122,10 @@ const ProductDialog = () => {
               </div>
               <button
                 name="addCart"
-                onClick={handleClick}
+                onClick={() => {
+                  handleOpenChange();
+                  handleClick("addCart");
+                }}
                 className="w-full p-4 mt-3 rounded-lg text-white font-semibold bg-[#7000FF]"
               >
                 Savatga Qo'shish

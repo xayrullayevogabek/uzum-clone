@@ -16,6 +16,7 @@ import {
   checkAll,
 } from "@/redux/slices/cartSlice";
 import Link from "next/link";
+import Counter from "@/components/shared/counter.tsx";
 
 const Page = () => {
   const [checkedAll, setCheckedAll] = useState<boolean>(true);
@@ -80,7 +81,9 @@ const Page = () => {
                       onCheckedChange={() => dispatch(checkAll(!checkedAll))}
                       className="data-[state=checked]:bg-[#7000FF] rounded-none data-[state=checked]:text-primary-foreground border-black"
                     />
-                    <span className=" text-sm">Hammasini {checkedAll ? "yechish" : "tanlash"} </span>
+                    <span className=" text-sm">
+                      Hammasini {checkedAll ? "yechish" : "tanlash"}{" "}
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <span className=" text-sm text-gray-500">
@@ -135,25 +138,7 @@ const Page = () => {
                           </span>
 
                           {/* Counter Btn */}
-                          <div className="mr-2 border border-gray-300 rounded-md w-28 px-2 flex justify-between py-2">
-                            <button
-                              onClick={() => handleClick("decrement", item.id)}
-                              className={""}
-                            >
-                              <FiMinus />
-                            </button>
-                            <span>{item.quantity}</span>
-                            <button
-                              className={`${
-                                item.quantity === item.stock
-                                  ? "text-gray-400"
-                                  : ""
-                              }`}
-                              onClick={() => handleClick("increment", item.id)}
-                            >
-                              <FiPlus />
-                            </button>
-                          </div>
+                          <Counter item={item} handleClick={handleClick} />
                           {/* Counter Btn End*/}
                           <span>
                             {addSpaceToNumber(

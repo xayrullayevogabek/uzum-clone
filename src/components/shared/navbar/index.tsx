@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import TopNavbar from "./top-nav";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
@@ -141,7 +141,11 @@ const Navbar = () => {
             <button className="flex items-center space-x-2 hover:bg-slate-200 px-2 py-3 rounded-sm">
               <GrShop className="text-xl mr-2" />
               <span className="max-[1200px]:hidden">Savat</span>
-              <span className="max-[1200px]:hidden block text-white px-2 rounded-sm bg-[#7000FF]">{store.cart.length}</span>
+              {store.cart.length > 0 && (
+                <span className="max-[1200px]:hidden block text-white px-2 rounded-sm bg-[#7000FF]">
+                  {store.cart.length}
+                </span>
+              )}
             </button>
           </Link>
           <SignedIn>
