@@ -36,12 +36,12 @@ const Navigation = () => {
         />
         Muddatli to'lov
       </Link>
-      {categoryData.slice(0, slicer).map((item) => (
-        <div className="group mt-1">
+      {categoryData.slice(0, slicer).map((item, indx) => (
+        <div key={indx} className="group mt-1">
           <Link href={item.href} className="text-sm text-gray-500 ">
             {item.translations.uz.title}
           </Link>
-          <div className="group-hover:w-full cursor-pointer h-[1.3px] bg-black w-0 left-0 transition-all duration-500 mt-1"/>
+          <div className="group-hover:w-full cursor-pointer h-[1.3px] bg-black w-0 left-0 transition-all duration-500 mt-1" />
         </div>
       ))}
       <button className="text-sm flex items-center">

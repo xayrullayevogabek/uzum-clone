@@ -48,7 +48,7 @@ const ProductDetail = ({ params }: { params: { id: number } }) => {
     } else {
       setLike(false);
     }
-  }, [favorites]);
+  }, [favorites, data?.id]);
 
   const handleClick = (type: string) => {
     switch (type) {
@@ -212,8 +212,8 @@ const ProductDetail = ({ params }: { params: { id: number } }) => {
             </button>
           </div>
           <div className=" mt-5 border border-gray-400 p-4 rounded-3xl">
-            {infoBanner.map((item) => (
-              <div className=" py-2 first:pb-2 first:pt-0 last:pb-0 last:pt-2 border-b border-b-gray-400 last:border-b-transparent flex flex-col">
+            {infoBanner.map((item, index) => (
+              <div key={index} className=" py-2 first:pb-2 first:pt-0 last:pb-0 last:pt-2 border-b border-b-gray-400 last:border-b-transparent flex flex-col">
                 <span className=" text-md font-semibold">{item.title}</span>
                 <span className=" text-sm text-gray-600">{item.subtitle}</span>
               </div>

@@ -96,8 +96,11 @@ const Page = () => {
                   </div>
                 </div>
                 <div className=" py-5">
-                  {cart.map((item) => (
-                    <div className=" flex items-start border-b border-b-gray-200 py-5 last:border-b-0 gap-5">
+                  {cart.map((item, indx) => (
+                    <div
+                      key={indx}
+                      className=" flex items-start border-b border-b-gray-200 py-5 last:border-b-0 gap-5"
+                    >
                       {/* Checkbox and Image */}
                       <div className=" flex items-center gap-5">
                         <Checkbox

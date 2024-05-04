@@ -68,6 +68,7 @@ const ProductDialog = () => {
               <div className="flex items-start mt-2 w-full">
                 {product?.images.map((item, indx) => (
                   <div
+                    key={indx}
                     onClick={() => setImageIndx(indx)}
                     className={`relative cursor-pointer w-16 h-20 p-2 mr-2 border-2 rounded-md ${
                       imageIndx === indx ? "border-gray-900" : "border-gray-300"

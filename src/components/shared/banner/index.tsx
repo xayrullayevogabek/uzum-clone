@@ -22,8 +22,8 @@ const Banner = () => {
           swiperRef.current = swiper;
         }}
       >
-        {bannerData.map((item) => (
-          <SwiperSlide className=" w-full h-full">
+        {bannerData.map((item, index) => (
+          <SwiperSlide key={index} className=" w-full h-full">
             <img
               src={item.image}
               alt="banner-image"

@@ -17,8 +17,8 @@ const Page = () => {
             <h1 className=" text-2xl py-5">Istaklarim</h1>
           </div>
           <div className=" mt-2 grid grid-cols-2 md:grid-cols-3 gap-5 lg:grid-cols-4 xl:grid-cols-5">
-            {favorites.map((item) => (
-              <Card product={item} />
+            {favorites.map((item, index) => (
+              <Card key={index} product={item} />
             ))}
           </div>
         </>

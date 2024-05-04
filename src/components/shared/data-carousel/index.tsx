@@ -33,8 +33,8 @@ const DataCarousel = ({ products }: Props) => {
           swiperRef.current = swiper;
         }}
       >
-        {data.map((item: ProductType) => (
-          <SwiperSlide>
+        {data.map((item: ProductType, index) => (
+          <SwiperSlide key={index}>
             <Card product={item} />
           </SwiperSlide>
         ))}
