@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import TopNavbar from "./top-nav";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { BsFilterSquare } from "react-icons/bs";
@@ -12,9 +12,22 @@ import Navigation from "./navigation";
 import ProductDialog from "../product-dialog";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const [value, setValue] = useState<string>("");
+
+  const router = useRouter();
   const store = useSelector((store: RootState) => store.cart);
+
+  const onSubmit = (e: any) => {
+    e.preventDefault();
+    if (value.trim() !== "") {
+      router.push(`/search/${value}`);
+      setValue("");
+    }
+  };
+
   return (
     <>
       <TopNavbar />
@@ -119,14 +132,21 @@ const Navbar = () => {
             <span>Katalog</span>
           </button>
         </div>
-        <form className="flex max-[1200px]:w-1/2 max-[1200px]:mx-3  h-10 items-center justify-between border border-gray-300 w-2/5 rounded-sm">
+        <form
+          onSubmit={onSubmit}
+          className="flex max-[1200px]:w-1/2 max-[1200px]:mx-3  h-10 items-center justify-between border border-gray-300 w-2/5 rounded-sm"
+        >
           <input
             type="text"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
             placeholder="Maxsulot va turkumlar izlash"
-            className="w-full outline-none px-5
-          "
+            className="w-full outline-none px-5"
           />
-          <button className=" bg-gray-200 h-full w-20 flex items-center justify-center">
+          <button
+            type="submit"
+            className=" bg-gray-200 h-full w-20 flex items-center justify-center"
+          >
             <IoSearchOutline className="text-xl" />
           </button>
         </form>

@@ -13,7 +13,7 @@ const DataRow = ({ groupedProducts }: Props) => {
     <div>
       {groupedProducts.map((item) => (
         <>
-          <h1 className="capitalize text-3xl flex mt-10 items-center font-bold">
+          <h1 className="capitalize text-2xl flex mt-10 items-center font-semibold">
             {item.categoryName.split("-").join(" ")}
             <GrNext className={"text-2xl mt-1 ml-2"} />
           </h1>

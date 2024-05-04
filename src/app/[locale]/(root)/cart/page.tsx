@@ -17,6 +17,7 @@ import {
 } from "@/redux/slices/cartSlice";
 import Link from "next/link";
 import Counter from "@/components/shared/counter.tsx";
+import Empty from "@/components/shared/empty";
 
 const Page = () => {
   const [checkedAll, setCheckedAll] = useState<boolean>(true);
@@ -195,21 +196,11 @@ const Page = () => {
           </div>
         </>
       ) : (
-        <div className=" flex flex-col items-center gap-5">
-          <div className=" relative w-56 h-56">
-            <CustomImage image="/images/emptycart.png" />
-          </div>
-          <h1 className="text-xl">Savatda hozircha mahsulot yoʻq</h1>
-          <span className=" text-sm">
-            Bosh sahifadagi to’plamlardan boshlang yoki kerakli mahsulotni
-            qidiruv orqali toping
-          </span>
-          <Link href={"/"}>
-            <button className=" py-3 px-10 cursor-pointer bg-[#7000FF] text-white rounded-sm ">
-              Bosh sahifa
-            </button>
-          </Link>
-        </div>
+        <Empty
+          title="Savatda hozircha mahsulot yoʻq"
+          subTitle="Bosh sahifadagi to’plamlardan boshlang yoki kerakli mahsulotni qidiruv orqali toping"
+          image="/images/emptycart.png"
+        />
       )}
     </div>
   );

@@ -20,6 +20,7 @@ import { FaStar } from "react-icons/fa";
 import infoBanner from "@/data/infoBanner.json";
 import { addFavorite } from "@/redux/slices/favouritesSlice";
 import { RootState } from "@/redux/store";
+import RelatedProducts from "@/components/shared/relatedProducts";
 
 const ProductDetail = ({ params }: { params: { id: number } }) => {
   const [like, setLike] = useState(false);
@@ -224,6 +225,7 @@ const ProductDetail = ({ params }: { params: { id: number } }) => {
           </div>
         </div>
       </div>
+      <RelatedProducts />
     </div>
   );
 };
