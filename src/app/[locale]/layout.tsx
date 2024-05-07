@@ -30,12 +30,10 @@ export default function RootLayout({ children, params: { locale } }: Props) {
     <html lang={locale}>
       <body className={inter.className}>
         <Providers>
-          <ClerkProvider>
-            <NextIntlClientProvider locale={locale} messages={messages}>
-              <Navbar />
-              <main>{children}</main>
-            </NextIntlClientProvider>
-          </ClerkProvider>
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Navbar />
+            <main>{children}</main>
+          </NextIntlClientProvider>
         </Providers>
       </body>
     </html>
