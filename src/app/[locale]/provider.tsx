@@ -7,12 +7,16 @@ import { Provider } from "react-redux";
 import { ClerkProvider } from "@clerk/nextjs";
 
 const Providers = ({ children }: { children: React.ReactNode }) => {
+  const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+
+  if (!clerkPublishableKey) {
+    console.error("Missing Clerk Publishable Key");
+    return null;
+  }
   return (
     <Provider store={store}>
       <HydrationProvider>
-        <ClerkProvider
-          publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}
-        >
+        <ClerkProvider publishableKey={clerkPublishableKey}>
           <GlobalContext>
             <Client>{children}</Client>
           </GlobalContext>
